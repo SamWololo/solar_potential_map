@@ -4,7 +4,7 @@ name: basic CI
 on:
   push:
     # branches: [ prod ] - REPLACE WITH THE CORRECT BRANCH
-    branches: [ master ]
+    branches: [ test ]
 
 jobs:
   build-and-deploy-on-cloud-run:
