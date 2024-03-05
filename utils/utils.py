@@ -19,8 +19,9 @@ def rooftop_area_calculator(zoom,lat, mask:np.array):
     #Based on the assumption earth's radius = 6378137m
 
     #Get pixel length
-    pixel_length = 156543.03392 * np.cos(lat * np.pi / 180) / (2 ** zoom)
-    pixel_area = pixel_length ** 2
+    pixel_area = 156543.03392 * np.cos(lat * np.pi / 180) / (2 ** zoom)
+    #Image gets doubled in size, correction for this resizing
+    pixel_area = pixel_area / 2
     white_pixel_count = np.count_nonzero(mask)
     #Return pixel area
     return pixel_area * white_pixel_count
