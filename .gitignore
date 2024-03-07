@@ -11,6 +11,7 @@ original/
 data_for_ml/
 retrain_weights/
 utils/__pycache__/
+mapsmaps.jpg
 # Secrets
 frontend/.streamlit/secrets.toml
 frontend/.devcontainer/
